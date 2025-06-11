@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		62376F0F2DF9D2AA00312738 /* output.c in Sources */ = {isa = PBXBuildFile; fileRef = 62376F0E2DF9D2AA00312738 /* output.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		62F0D8612DF730BA00BCF853 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -19,6 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		62376F0D2DF9D2AA00312738 /* output.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = output.h; sourceTree = "<group>"; };
+		62376F0E2DF9D2AA00312738 /* output.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = output.c; sourceTree = "<group>"; };
 		62F0D8632DF730BA00BCF853 /* honeycomb */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = honeycomb; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -44,6 +50,8 @@
 		62F0D85A2DF730BA00BCF853 = {
 			isa = PBXGroup;
 			children = (
+				62376F0D2DF9D2AA00312738 /* output.h */,
+				62376F0E2DF9D2AA00312738 /* output.c */,
 				62F0D8652DF730BA00BCF853 /* honeycomb */,
 				62F0D8642DF730BA00BCF853 /* Products */,
 			);
@@ -121,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62376F0F2DF9D2AA00312738 /* output.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

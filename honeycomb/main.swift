@@ -7,8 +7,10 @@
 
 import Foundation
 
-let MAX_NODE_COUNT: Int = 10
+let MAX_NODE_COUNT: Int = 9
 let MAX_LENGTH: Int = MAX_NODE_COUNT - 1
+let printDebuggingInfo: Bool = false
+let printGraphInfo: Bool = false
 
 class HoneycombGraph {
     let nodes: Set<Int>
@@ -94,9 +96,10 @@ class HoneycombGraph {
             if pathLength > 0 {
                 totalPaths += 1
                 let sortedVisited = visited.sorted()
-                print("visited: \(sortedVisited)")
-                print("path #\(totalPaths): \(path)")
-                //print()
+                if printDebuggingInfo {
+                    print("visited: \(sortedVisited)")
+                    print("path #\(totalPaths): \(path)")
+                }
                 all_paths.append(path)
             }
 
@@ -141,6 +144,7 @@ class HoneycombGraph {
     }
     
     func printGraphInfo() {
+        // Show Adjacency relationships
         print("Honeycomb Graph Structure:")
         print("Total nodes: \(nodes.count)")
         print("\nAdjacency relationships:")
@@ -164,8 +168,10 @@ func main() {
 
     let graph = HoneycombGraph()
     
-    // Uncomment the next line if you want to see the graph structure
-    //graph.printGraphInfo()
+    if printGraphInfo {
+        // Print  the graph structure
+        graph.printGraphInfo()
+    }
     
 
     print("Counting simple paths starting from node \(startNode) (center)")
@@ -183,6 +189,7 @@ func main() {
     print("========")
     print("Maximum node count: \(MAX_NODE_COUNT)")
     print("Number of unique simple paths: \(pathCount)")
+    print("Printing Debugging Info: \(printDebuggingInfo)")
     print("Execution time: \(String(format: "%.4f", executionTime)) seconds")
     
     // Breakdown by path length
